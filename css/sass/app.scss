@@ -1,0 +1,19 @@
+
+// 1 - ABSTRACTS
+@import '1-abstracts/_variables';
+@import '1-abstracts/_mixins';
+
+// 2 - VENDORS
+@import '2-vendor/reset';
+
+// 3 - BASE
+@import '3-base/_typography';
+@import '3-base/_links-buttons';
+@import '3-base/base.scss';
+
+// 4 - COMPONENTS
+@import '4-components/header.scss';
+@import '4-components/footer.scss';
+
+// 4 - PAGES
+@import '5-pages/home.scss';

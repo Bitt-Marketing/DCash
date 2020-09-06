@@ -1,0 +1,43 @@
+$primary-font:Arial;
+$secondary-font: 'Arial Black';
+$text-base-size:1rem;
+$text-scale-ratio:1.26;
+
+/* type scale */
+$text-sm: 0.88rem;
+$text-h6: $text-base-size * $text-scale-ratio;
+$text-h5: $text-h6 * $text-scale-ratio;
+$text-h4: $text-h5 * $text-scale-ratio;
+$text-h3: $text-h4 * $text-scale-ratio;
+$text-h2: $text-h3 * $text-scale-ratio;
+$text-h1: $text-h2 * $text-scale-ratio;
+
+body{
+    font-family:$primary-font;
+    font-size: $text-base-size;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.4;
+    font-weight: 400;
+    
+}
+
+h1,h2,h3,h4,h5,h6{line-height: 1.2; color:#1c1c1c; font-family: $secondary-font;}
+
+h1{font-size: $text-h1; letter-spacing:-2.8px;}
+h2{font-size: $text-h2;}
+h3{font-size: $text-h3;}
+h4{font-size: $text-h4;}
+h5{font-size: $text-h5;}
+h6{font-size: $text-h6;}
+
+
+h1{margin-bottom: 48px; line-height:1.15; font-weight: 800;}
+h3{margin-bottom: 1em;}
+h4{margin-bottom: 1em;}
+h6{font-weight: 500; line-height: 1.5; margin-bottom: 32px;}
+p.lg{font-size:18px; margin-bottom: 32px;}
+
+@media screen and (max-width:800px),screen and (max-device-width:800px){
+    h1{font-size: 3.5em;}
+}

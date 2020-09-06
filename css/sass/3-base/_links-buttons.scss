@@ -1,0 +1,57 @@
+//  ***********************
+//  Links
+//  ***********************
+
+a{color:$dcash-blue; font-weight:600;}
+
+
+//  ***********************
+//  Buttons
+//  ***********************
+
+.btn{
+    background-color: $dcash-green;
+    font-weight: 600;
+    color: white;
+    padding: 0.6em 1.25em;
+    border-radius: 50px;
+    display: inline-block;
+    font-size:1em;
+
+    &.lg{font-size:18px;}
+
+    &.green{
+        background-color: $dcash-green;
+        box-shadow: 0 1px 2px 0 rgba(22,116,39,0.35);
+    }
+
+    &.white{
+        background-color: white;
+        color:black;
+        box-shadow: 0 1px 2px 0 rgba(22,116,39,0.35);
+    }
+
+
+    //withicons
+    &.playbtn{
+        position:relative;
+        padding-left:1.85em;
+        &:before{
+            content: "";
+            width: 80px;
+            height: 80px;
+            display: block;
+            position: absolute;
+            z-index: -1;
+            left: 50%;
+            top: -85px;
+            transform: translateX(-50%);
+            background-image: url("../images/icons/ic-play.svg");
+            background-repeat: no-repeat;
+            background-size: 90%;
+            background-color: white;
+            border-radius: 100%;
+            background-position: center;
+        }
+    }
+}

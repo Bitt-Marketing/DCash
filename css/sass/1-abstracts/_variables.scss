@@ -1,0 +1,27 @@
+//  ***********************
+//  Color Variables
+//  ***********************
+$dcash-blue:#3344b3;
+$dcash-green:#36BC41;
+
+//  ***********************
+//  Misc Variables
+//  ***********************
+
+$header-height:126px;
+
+
+@keyframes bounce{
+    0%, 100% {
+        transform: translate(0,0);
+    }
+    10% {
+        transform: translate(0,2px);
+    }
+    50% {
+        transform: translate(0,-7px);
+    }
+    90% {
+        transform: translate(0,4px);
+    }
+}
