@@ -1,32 +1,20 @@
 .home{
+
+    //HERO SECTION
     .hero{
         width:100%; 
         padding-top:4em;
-        margin-bottom:-90px;
         overflow:hidden;
         position:relative;
 
         .container{
             display:grid;
-            grid-template-columns: 440px 1fr;
-            grid-gap:65px
+            grid-template-columns: 450px 1fr;
+            grid-gap:10em;
         }
 
         .intro{
-            h1{
-                i{
-                    display:inline-block; 
-                    color:transparent;
-                    position:relative;
-                }
-                canvas{
-                    position:absolute;
-                    width:100%;
-                    height:100%;
-                    left:0;
-                    top:-2px;
-                }
-            }
+
             .ctas{
                 display:flex;
                 align-items:center;
@@ -49,37 +37,145 @@
                 left: 48%;
                 transform: translate(40%, 0%);
                 padding: 2px 10px;
-                font-size: 16px;
+                font-size: 14px;
             }
 
             img{
-                width:120%;
+                width:135%;
+                max-width: 1050px;
             }
         }
     }
 
-    .how{
-        background-image: linear-gradient(90deg, #E9FFFF 0%, #DFF2FF 100%);
-        margin-top:150px;
-        .container{min-height: 100vh;
-            padding:150px 0px;
-        }
-        .info{
-            max-width:600px;
+    //COUNTRIES SECTION
+    .countries{
+        .container{        
+            p{max-width:800px; margin:0px auto; text-align:center;}
+
+            ul{
+                max-width:450px; 
+                margin:4em auto;
+                display:flex; 
+                justify-content:space-between;
+            
+                li{
+                    max-width:100px;
+
+                    .img{
+                        width:100%; 
+                        height:40px;
+                        border-radius: 5px;
+                        overflow: hidden;
+                        box-shadow:0 3px 20px rgba(0,0,0,.15);
+                        img{width:100%; height:100%; object-fit: cover;}
+                    }
+                }
+            }
+
+            p.note{max-width: 450px; font-size: 16px;}
         }
     }
 
-    .choose-path{
+    //HOW IT WORKS SECTION
+    .how{
+        padding-top:150px;
 
         .container{
-            dispaly:grid;
-            .right{
+            position:relative;
+            .info{
+                max-width:620px;
+                padding: 75px;
+                position:absolute;
+                background-color:#fbf7ed;
+                left:0;
+                transform:translateY(-55px);
 
-            }
-
-            .left{
-                
+                p{margin:0px;}
             }
         }
+
+        img{
+            display:block; 
+            width:100%; 
+        }
     }
+
+    //ANYONE WITH SMARTPHONE SECTION
+    .anyone{
+        padding:150px 0px 120px;
+        background-color: #fbf7ed;
+
+        .container{
+            display:grid;
+            grid-template-columns: 540px 630px;
+            justify-content:space-between;
+        }
+
+        .info{
+            p.lg{margin-bottom: 1em;;}
+            .choose-path{
+                display: flex;
+                background-color: #282f28;
+                border-radius: 100px;
+                font-size: 18px;
+                font-weight: 600;
+                padding: 5px;
+                margin-bottom:3em;
+
+                li{
+                    width: 50%;
+                    text-align: center;
+                }
+
+                span{
+                    display: block;
+                    width: 100%;
+                    padding: 16px 25px;
+                    border-radius: 100px;
+                    cursor:pointer;
+                    color: white;
+
+                    &.active{background-color: $dcash-green;}
+                }
+            }
+
+            .path-information{
+                position:relative;
+
+                >div{
+                    opacity:0;
+                    visibility:hidden;
+
+                    &.active{
+                        opacity:1;
+                        visibility:visible;
+                    }
+
+                    &:nth-child(2){position:absolute; top:0; left:0;}
+                }
+
+                .download{
+                    margin-top:2em;
+                    padding-top:2em;
+                    border-top:1px solid #dbdbbe;
+                    p{font-size:14px; color:#62624c;}
+                    .ctas{
+                        display: flex;
+                        max-width:300px;
+                        a{display:block; margin-right:0.5em;}
+                        img{width:100%;}
+                    }
+                }
+            }
+        }
+
+        .carousel{
+            transform: translateY(-30px);
+            
+            img{width: 100%;}
+        }
+    }
+
+
+
 }

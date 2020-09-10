@@ -1,10 +1,11 @@
 .header{
     display:flex;
     align-items:flex-start;
-    padding:2em 2.5em;
+    padding:1.15em 2.5em;
     position:fixed;
     z-index:99;
     width:100%;
+    background-color:white;
 
     .logo{
         max-width:75px;
@@ -22,9 +23,43 @@
         li{
             margin:0px 1.5em;
 
-            a{font-weight:600; font-size:1em; color:#5a5b64;}
+            a{
+                font-weight:600; 
+                font-size:1em; 
+                color:#5a5b64;
+
+                &.active{color:$dcash-blue;}
+            }
         }
     }
 
     .btn{margin-left: auto; font-size:0.9em;}
+}
+
+.sub-header{
+    background-color:white;
+    border-bottom:1px solid #ececec;
+    border-top:1px solid #ececec;
+    position:fixed;
+    top:$header-height;
+    left:0;  
+    width:100%;
+    padding:1em 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    z-index:98;
+
+
+    ul{
+        margin:0px auto;
+        display:flex;
+
+        li{margin:0px 1.5em;}
+        a{
+            color:#5a5b64; 
+            font-size:14px;
+            &.active{color:$dcash-blue;}
+        }
+    }
 }

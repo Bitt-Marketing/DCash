@@ -1,0 +1,51 @@
+#content.consumer{
+    padding-top:$header-with-sub-height;
+
+    .hero{
+        min-height:100vh;
+    
+    }
+
+
+    //Benefits Section
+    .benefits{
+        background-color:#fbf7ed;
+        .container{
+            display:grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap:120px;
+
+            .img{
+                position:relative;
+                direction:rtl;
+
+                img{
+                    max-width: 1500px;
+                    position:absolute;
+                    width:auto;
+                    right:0;
+                    bottom:0;
+                }
+            }
+
+            .info{
+                padding:150px 0px;
+                h3{margin-bottom: 2em;}
+                ul{
+                    display:grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-column-gap:100px;
+                    grid-row-gap:60px;
+
+                    li{
+                        list-style: disc;
+                        padding-left:0.5em;
+
+                        p{margin:0px;}
+                    }
+                }
+            }
+        }
+    }
+
+}

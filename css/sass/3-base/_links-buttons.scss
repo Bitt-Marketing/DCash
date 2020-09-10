@@ -10,7 +10,7 @@ a{color:$dcash-blue; font-weight:600;}
 //  ***********************
 
 .btn{
-    background-color: $dcash-green;
+    background-color: $dcash-blue;
     font-weight: 600;
     color: white;
     padding: 0.6em 1.25em;
@@ -38,17 +38,17 @@ a{color:$dcash-blue; font-weight:600;}
         padding-left:1.85em;
         &:before{
             content: "";
-            width: 80px;
-            height: 80px;
+            width: 50px;
+            height: 50px;
             display: block;
             position: absolute;
             z-index: -1;
             left: 50%;
-            top: -85px;
+            top: -55px;
             transform: translateX(-50%);
             background-image: url("../images/icons/ic-play.svg");
             background-repeat: no-repeat;
-            background-size: 90%;
+            background-size: 85%;
             background-color: white;
             border-radius: 100%;
             background-position: center;
