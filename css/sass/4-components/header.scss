@@ -1,7 +1,8 @@
 .header{
     display:flex;
     align-items:flex-start;
-    padding:1.15em 2.5em;
+    align-items:center;
+    padding:1em 2.5em;
     position:fixed;
     z-index:99;
     width:100%;
@@ -16,7 +17,7 @@
     ul{
         position:absolute;
         left:50%;
-        top:2.5em;
+        top:2.2em;
         transform:translateX(-50%);
         display:flex;
 
@@ -55,7 +56,7 @@
         margin:0px auto;
         display:flex;
 
-        li{margin:0px 1.5em;}
+        li{margin:0px 2em;}
         a{
             color:#5a5b64; 
             font-size:14px;

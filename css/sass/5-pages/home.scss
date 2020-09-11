@@ -3,18 +3,17 @@
     //HERO SECTION
     .hero{
         width:100%; 
-        padding-top:4em;
         overflow:hidden;
         position:relative;
 
         .container{
             display:grid;
             grid-template-columns: 450px 1fr;
-            grid-gap:10em;
+            grid-gap:7.5%;
         }
 
         .intro{
-
+            padding-top:6em;
             .ctas{
                 display:flex;
                 align-items:center;
@@ -27,7 +26,6 @@
         }
 
         .intro-assets{
-            transform:translateY(-90px);
             position:relative;
 
             .btn{
@@ -41,20 +39,22 @@
             }
 
             img{
-                width:135%;
+                width: 115%;
                 max-width: 1050px;
+                min-width: 785px;
             }
         }
     }
 
     //COUNTRIES SECTION
     .countries{
+        padding-top:$section-padding;
         .container{        
             p{max-width:800px; margin:0px auto; text-align:center;}
 
             ul{
                 max-width:450px; 
-                margin:4em auto;
+                margin:3em auto;
                 display:flex; 
                 justify-content:space-between;
             
@@ -78,31 +78,33 @@
 
     //HOW IT WORKS SECTION
     .how{
-        padding-top:150px;
+        padding-top:$section-padding;
+        overflow:hidden;
 
         .container{
             position:relative;
+            display:grid;
+            grid-template-columns: 390px 1fr;
+            grid-gap:6em;
             .info{
-                max-width:620px;
-                padding: 75px;
-                position:absolute;
-                background-color:#fbf7ed;
-                left:0;
-                transform:translateY(-55px);
-
+                padding-top:5em;
                 p{margin:0px;}
             }
-        }
 
-        img{
-            display:block; 
-            width:100%; 
+            .img{
+                img{
+                    border-radius:10px;
+                    display:block; 
+                    max-width:1100px;
+                    box-shadow: 0 10px 36px 0 rgba(0,0,0,.16),0 0 0 1px rgba(0,0,0,.06);
+                }
+            }
         }
     }
 
     //ANYONE WITH SMARTPHONE SECTION
     .anyone{
-        padding:150px 0px 120px;
+        padding:$section-padding 0px 120px;
         background-color: #fbf7ed;
 
         .container{
