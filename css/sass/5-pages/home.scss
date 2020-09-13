@@ -1,5 +1,5 @@
 .home{
-
+    overflow:hidden;
     //HERO SECTION
     .hero{
         width:100%; 
@@ -8,7 +8,7 @@
 
         .container{
             display:grid;
-            grid-template-columns: 450px 1fr;
+            grid-template-columns: 500px 1fr;
             grid-gap:7.5%;
         }
 
@@ -79,7 +79,6 @@
     //HOW IT WORKS SECTION
     .how{
         padding-top:$section-padding;
-        overflow:hidden;
 
         .container{
             position:relative;
@@ -105,7 +104,7 @@
     //ANYONE WITH SMARTPHONE SECTION
     .anyone{
         padding:$section-padding 0px 120px;
-        background-color: #fbf7ed;
+        /*background-color: #fbf7ed;*/
 
         .container{
             display:grid;
