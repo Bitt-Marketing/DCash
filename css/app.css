@@ -346,11 +346,11 @@ a {
   justify-content: space-between;
 }
 .home .countries .container ul li {
-  max-width: 100px;
+  max-width: 90px;
 }
 .home .countries .container ul li .img {
   width: 100%;
-  height: 40px;
+  height: 55px;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.15);
@@ -359,6 +359,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 .home .countries .container p.note {
   max-width: 450px;
