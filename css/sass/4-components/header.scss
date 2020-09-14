@@ -38,9 +38,9 @@
 }
 
 .sub-header{
-    background-color:#fffffff2;
-    border-bottom:1px solid #ececec;
-    border-top:1px solid #ececec;
+    background:linear-gradient(90deg, #F8F9FF 0%, #F0FBF3 100%);
+    border-bottom:1px solid #ebecf0;
+    border-top:1px solid #ebecf0;
     position:fixed;
     top:$header-height;
     left:0;  

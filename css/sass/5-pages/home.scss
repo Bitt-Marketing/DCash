@@ -8,7 +8,7 @@
 
         .container{
             display:grid;
-            grid-template-columns: 500px 1fr;
+            grid-template-columns: 440px 1fr;
             grid-gap:7.5%;
         }
 
@@ -103,13 +103,28 @@
 
     //ANYONE WITH SMARTPHONE SECTION
     .anyone{
-        padding:$section-padding 0px 120px;
+        padding:150px 0px 120px;
         /*background-color: #fbf7ed;*/
 
         .container{
-            display:grid;
-            grid-template-columns: 540px 630px;
-            justify-content:space-between;
+            display: grid;
+            grid-template-columns: 390px 0.65fr;
+            grid-gap: 6em;
+            background-image: linear-gradient(0deg, #F8F9FF 0%, #F0FBF3 100%);
+            border-radius: 10px;
+            padding: 80px;
+            padding-left: 50px;
+        }
+
+        .apps{
+            position:relative;
+
+            img{
+                max-width: 140%;
+                position: absolute;
+                bottom: -80px;
+                right: 0;
+            }
         }
 
         .info{

@@ -14,17 +14,23 @@ for(let i = 0; i< homeStartedBtns.length; i++){
 }
 
 /*
-var FRAMES = 148;
-var FPS = 30;
-var video = document.getElementById('video');
+  let featuresInfo = document.querySelectorAll('.info-list .item');
+  let mainSections = document.querySelectorAll('.screen-list .item');
 
-window.addEventListener('scroll', function (e) {
-  var time = (window.scrollY / 1000) * FRAMES / FPS;
-  video.currentTime = time;
-  console.log(time);
-});
+  window.addEventListener("scroll", event => {
 
-window.addEventListener('load', function(e) {
-  video.pause();
-  video.currentTime = 0;
-});*/
+    featuresInfo.forEach(feature => {
+      let section = document.getElementById(feature.dataset.benefit);
+
+
+      if (
+        section.getBoundingClientRect().top <= 0 &&
+        section.getBoundingClientRect().bottom  <= (window.innerHeight || document.documentElement.clientHeight)
+      ) {
+        feature.classList.add("active");
+      } else {
+        feature.classList.remove("active");
+      }
+    });
+  });*/
+
