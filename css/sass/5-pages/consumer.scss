@@ -28,34 +28,76 @@
         .container{
             .info{
                 display: grid;
-                grid-template-columns: 1fr 390px;
-                grid-gap: 6em;
+                grid-template-columns: 350px minmax(0, 1fr);
+                grid-gap: 70px;
                 justify-content: space-between;
                 position: relative;
                 align-items: flex-start;
 
-                .img{
-                    position: sticky;
-                    top: 200px;
-                    min-height: 100vh;
+                h3{position:sticky; top:200px;}
+                img{
+                    max-width: calc(100% + 150px);
+                    border-radius: 10px 0px 0px 10px;
+                    margin-bottom: 100px;
+                    box-shadow: 0 10px 36px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.06);
+                }
+            }
+
+            ul{
+                display:grid;
+                grid-template-columns:1fr 1fr 1fr;
+                grid-column-gap:100px;
+                grid-row-gap:100px;
+                justify-content:space-between;
+                li{
+                    &:last-child{margin:0px;}
+                    h6{margin-bottom:0.5em;}
+                    p{margin:0px; font-size:16px;}
+                }
+            }
+        }
+    }
+
+    .features{
+        padding-top:$section-padding;
+        min-height: 100vh;
+        background:linear-gradient(0deg, #F8F9FF 0%, #F0FBF3 100%);
+
+        .container{
+            display: grid;
+            grid-template-columns: 350px minmax(0, 1fr);
+            grid-gap:70px;
+            align-items: flex-start;;
+            h3{position:sticky; top:200px;}
+            .list{
+                display:grid;
+                grid-template-columns: 1fr;
+                grid-gap:5em;
+                justify-content: space-between;
+
+                .item{
+                    min-height: 600px;
+                    margin-bottom: 5em;
+                    display: grid;
+                    align-items: flex-start;
+                    grid-template-columns: 0.4fr 0.4fr;
+                    grid-gap: 7em;
+                    justify-content: center;
+
+                    > div{
+                        padding-top: 25px;
+                        top: 200px;
+                        position: sticky;
+                    }
                     img{
-                        position: absolute;
-                        right: 0;
-                        max-width: 1100px;
+                        max-width:100%; 
+                        display:block; 
                         border-radius: 10px;
                         box-shadow: 0 10px 36px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.06);
                     }
                 }
-                ul{
-                    padding-top:75vh;
-                    li{
-                        margin-bottom: 100px;
-                        &last-child{margin:0px;}
-                        h5{margin-bottom:0.5em;}
-                        p{margin:0px;}
-                    }
-                }
             }
+
         }
     }
 
