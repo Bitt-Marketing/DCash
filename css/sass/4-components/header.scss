@@ -38,7 +38,7 @@
 }
 
 .sub-header{
-    background:linear-gradient(90deg, #F8F9FF 0%, #F0FBF3 100%);
+    background:linear-gradient(90deg, rgba(248, 249, 255) 0%, rgba(240, 251, 243, 0.95) 100%);
     border-bottom:1px solid #ebecf0;
     border-top:1px solid #ebecf0;
     position:fixed;
@@ -50,6 +50,8 @@
     align-items: center;
     justify-content: center;
     z-index:98;
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 
 
     ul{
