@@ -13,24 +13,22 @@ for(let i = 0; i< homeStartedBtns.length; i++){
     })
 }
 
-/*
-  let featuresInfo = document.querySelectorAll('.info-list .item');
-  let mainSections = document.querySelectorAll('.screen-list .item');
 
-  window.addEventListener("scroll", event => {
+gsap.registerPlugin(ScrollTrigger);
 
-    featuresInfo.forEach(feature => {
-      let section = document.getElementById(feature.dataset.benefit);
-
-
-      if (
-        section.getBoundingClientRect().top <= 0 &&
-        section.getBoundingClientRect().bottom  <= (window.innerHeight || document.documentElement.clientHeight)
-      ) {
-        feature.classList.add("active");
-      } else {
-        feature.classList.remove("active");
-      }
-    });
-  });*/
-
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".grid-container",
+    start: "top top",
+    end: "bottom bottom",
+    scrub: true,
+    pin: ".grid-images",
+    anticipatePin: 1
+  }
+})
+.set(".image:not(.center-img)", {autoAlpha: 0})
+.to(".image:not(.center-img)", {duration: 0.01, autoAlpha: 1})
+.to(".grid-images", {
+  scale: 1,
+  ease: "none",
+});
