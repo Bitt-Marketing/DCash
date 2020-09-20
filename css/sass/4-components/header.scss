@@ -22,11 +22,11 @@
         display:flex;
 
         li{
-            margin:0px 1.5em;
+            margin:0px 2em;
 
             a{
-                font-weight:600; 
-                font-size:1em; 
+                font-weight:400; 
+                font-size:1.2em; 
                 color:#5a5b64;
 
                 &.active{color:$dcash-blue;}
@@ -38,7 +38,7 @@
 }
 
 .sub-header{
-    background:linear-gradient(90deg, rgba(248, 249, 255) 0%, rgba(240, 251, 243, 0.95) 100%);
+    background-color:white;
     border-bottom:1px solid #ebecf0;
     border-top:1px solid #ebecf0;
     position:fixed;
@@ -53,7 +53,6 @@
     backdrop-filter:blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
-
     ul{
         margin:0px auto;
         display:flex;
@@ -61,8 +60,31 @@
         li{margin:0px 2em;}
         a{
             color:#5a5b64; 
-            font-size:14px;
-            &.active{color:$dcash-blue;}
+            font-size:16px;
+            font-weight:400;
+            &.active{color:$dcash-blue; font-weight: 600;}
         }
+    }
+
+    &.wallet-nav{
+        background-color:#00a07f;
+        border:none;
+
+        a{ 
+            color:#77ffd3;
+            &.active{color:#fff;}
+        }
+
+    }
+
+    &.merchant-nav{
+        background-color:#3B29B3;
+        border:none;
+
+        a{ 
+            color:#A2A6F9;
+            &.active{color:#fff; font-weight: 600;}
+        }
+
     }
 }

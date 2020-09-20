@@ -1,45 +1,98 @@
 #content.business{
     padding-top:$header-with-sub-height;
     .intro{
-
+        background-image: url('../images/merchants/business-hero4.jpg');
+        background-size:100%;
+        background-position: top center;
         position:relative;
-        overflow:hidden;
+        background-repeat: no-repeat;
         padding-bottom:100px;
+        overflow:hidden;
+
+        .features{
+            padding:0px 0px 150px;
+
+            .intro-img{
+                display:block;
+                max-width: 85%; 
+                max-height:650px;
+                margin:0px auto;
+                transform:scale(1.5);
+                transform-origin: top center;
+                border-radius: 15px;
+                box-shadow:0 10px 36px 0 rgba(0, 0, 0, 0.16);
+                overflow:hidden;
+
+                img{
+                    display:block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            }
+
+            h2{
+                text-align: center;
+                max-width: 750px;
+                margin: 1.5em auto;
+            }
+
+            ul{
+                display:flex;
+                justify-content:space-between;
+                flex-wrap: wrap;
+                li{
+                    max-width:25%;
+                    padding:0px 3em;
+                    text-align:center;
+
+                    .img{
+                        img{max-width:100%;}
+                    }
+                }
+            }
+        }
 
         .grid-container {
             width: 100%;
-            height: 400vh;
             position: relative;
             max-width:1800px;
-            margin:0px auto;
-    
+            margin:0px auto;    
           }
         
-        .grid-images{
-            display:grid;
-            grid-template-columns: repeat(15, 1fr);
-            grid-template-rows:repeat(15, 45px);
-            grid-gap:1em;
+        .grid{
             z-index: 1;
-            position: absolute;
-            top:144px;
             padding:  0px 150px 0px;
-            transform: scale(3.18);
-            transform-origin:center;
+            transform: scale(1.68) translateX(-220px);
+            transform-origin:top;
+
+            .grid-block{
+                display:grid;
+                grid-template-columns: 350px 0.95fr;
+                grid-gap:3em;
+                justify-content:space-between;
+                margin-bottom: 6em;
+
+                &:last-child{margin:0px;}
+                &.reverse{
+                    grid-template-columns: 0.95fr 350px;
+                    .text{padding-right:10px;}
+                }
+
+                &.first{.text{opacity:0;}}
+            }
+            
             
 
-            .image{
-                opacity:0;
+            .item{
                 border-radius: 15px;
                 overflow:hidden;
                 box-shadow:0 10px 36px 0 rgba(0, 0, 0, 0.16);
+                &.text{align-self: center; box-shadow:none;}
+                &.image{max-height:540px;}
 
-                &:nth-child(1){grid-column: 3/7; grid-row: 3/6;}
-                &:nth-child(2){grid-column: 7/13; grid-row: 2/6;}
-                &:nth-child(3){grid-column: 1/4; grid-row: 6/13;}
-                &:nth-child(4){grid-column: 4/13; grid-row: 6/13;}
-                &:nth-child(5){grid-column: 13/16; grid-row: 4/13;}
-                &.center-img{opacity:1;}
+                h3{margin:0px;}
                 img{width: 100%; height:100%; object-fit:cover;}
             }
         }
@@ -48,7 +101,7 @@
             z-index:5;
 
             .info{
-                padding:150px 0px 0px;
+                padding:150px 0px 150px;
                 text-align:center;
                 max-width:550px; margin:0px auto;
             }

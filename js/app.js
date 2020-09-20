@@ -18,17 +18,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.timeline({
   scrollTrigger: {
-    trigger: ".grid-container",
-    start: "top top",
-    end: "bottom bottom",
+    trigger: ".features",
+    start: "top 193px",
+    end: window.innerHeight * 1.5,
     scrub: true,
-    pin: ".grid-images",
+    pin: ".features",
     anticipatePin: 1
   }
 })
-.set(".image:not(.center-img)", {autoAlpha: 0})
-.to(".image:not(.center-img)", {duration: 0.01, autoAlpha: 1})
-.to(".grid-images", {
+.to(".intro-img", {
   scale: 1,
-  ease: "none",
+  x:0,
+  ease:  'none',
 });
+
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".grid-container",
+    start: "top 193px",
+    end: 'bottom bottom',
+    scrub: true,
+    pin: ".grid",
+    anticipatePin: 1
+  }
+})
+.to(".grid", {
+  scale: 1,
+  x:0,
+  ease:  'none',
+}).to(".first .text", {duration: 0.15, opacity: 1}, "-=0.2");
