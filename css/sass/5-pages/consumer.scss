@@ -47,7 +47,6 @@
                 z-index:2;
                 img{
                     @include img-border;
-                    box-shadow:0 10px 36px 0 rgba(0, 0, 0, 0.16);
                     max-width: 100%;
                     display:block;
                 }

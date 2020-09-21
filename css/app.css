@@ -605,7 +605,6 @@ a {
 #content.consumer .benefits .container .img img {
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 10px 36px 0 rgba(0, 0, 0, 0.16);
   max-width: 100%;
   display: block;
 }
@@ -709,7 +708,6 @@ a {
   object-fit: cover;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 10px 36px 0 rgba(0, 0, 0, 0.16);
 }
 #content.business .features .landing .right {
   display: grid;
@@ -758,7 +756,6 @@ a {
   margin-bottom: 5em;
 }
 #content.business .why .grid-block .item {
-  box-shadow: 0 10px 36px 0 rgba(0, 0, 0, 0.16);
   border-radius: 15px;
   overflow: hidden;
 }
@@ -810,7 +807,6 @@ a {
   object-fit: cover;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 10px 36px 0 rgba(0, 0, 0, 0.16);
 }
 #content.business .crossborder-callout .container .video .video-bg {
   background-color: #3B29B3;
