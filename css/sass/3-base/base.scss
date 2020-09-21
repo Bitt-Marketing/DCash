@@ -5,3 +5,17 @@
    max-width:1800px;
     margin:0px auto;
 }
+
+.ctas{
+    max-width: 350px;
+    display:flex;
+    margin-top:3em;
+    &.center{margin:3em auto 0;}
+    a{
+        display: block;
+        margin-right: 1em;
+        &:last-child{margin-right: 0px;}
+
+        img{max-width:100%;}
+    }
+}

@@ -18,9 +18,26 @@ gsap.registerPlugin(ScrollTrigger);
 
 gsap.timeline({
   scrollTrigger: {
-    trigger: ".features",
-    start: "top 193px",
-    end: window.innerHeight * 1.5,
+    trigger: ".benefits",
+    start: "top top",
+    end: window.innerHeight * 2,
+    scrub: true,
+    pin: ".benefits .img",
+    anticipatePin: 1
+  }
+})
+.to(".benefits .img", {
+  scale: 1,
+  y: 100,
+  ease:  'none',
+});
+
+let merchantFeat = document.querySelector('.landing .right').children;
+gsap.timeline({
+  scrollTrigger: {
+    trigger: ".feature-container",
+    start: "top 205px",
+    end: window.innerHeight * 2.2,
     scrub: true,
     pin: ".features",
     anticipatePin: 1
@@ -30,20 +47,21 @@ gsap.timeline({
   scale: 1,
   x:0,
   ease:  'none',
-});
+})
+.to(merchantFeat, { opacity:1, scale: 1, stagger:0.1}, '-=0.25');
 
 gsap.timeline({
   scrollTrigger: {
-    trigger: ".grid-container",
-    start: "top 193px",
-    end: 'bottom bottom',
+    trigger: ".why-container",
+    start: "top 205px",
+    end: window.innerHeight * 4,
     scrub: true,
-    pin: ".grid",
+    pin: ".why",
     anticipatePin: 1
   }
 })
-.to(".grid", {
+.to(".why", {
   scale: 1,
   x:0,
   ease:  'none',
-}).to(".first .text", {duration: 0.15, opacity: 1}, "-=0.2");
+}).to(".first .text", {duration: 0.1, opacity: 1}, "-=0.035");
