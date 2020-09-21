@@ -681,9 +681,9 @@ a {
   max-width: 590px;
   margin: 0px auto;
 }
-#content.business .features {
-  padding: 0px 0px 150px;
+#content.business .feature-container {
   overflow: hidden;
+  padding: 0px 0px 150px;
 }
 #content.business .features .landing {
   display: grid;

@@ -19,11 +19,8 @@
     }
 
 
-
+    .feature-container{overflow:hidden;padding:0px 0px 150px;}
     .features{
-        padding:0px 0px 150px;
-        overflow:hidden;
-
         .landing{
             display:grid;
             grid-template-columns:1fr 0.65fr;

@@ -37,7 +37,7 @@ gsap.timeline({
   scrollTrigger: {
     trigger: ".feature-container",
     start: "top 205px",
-    end: window.innerHeight * 2.2,
+    end: window.innerHeight * 2.5,
     scrub: true,
     pin: ".features",
     anticipatePin: 1
@@ -48,7 +48,7 @@ gsap.timeline({
   x:0,
   ease:  'none',
 })
-.to(merchantFeat, { opacity:1, scale: 1, stagger:0.1}, '-=0.25');
+.to(merchantFeat, { opacity:1, scale: 1, stagger:0.15}, '-=0.45');
 
 gsap.timeline({
   scrollTrigger: {
