@@ -1,0 +1,79 @@
+#content.fi{
+    padding:150px 0px;
+    background-image: linear-gradient(-17deg, #F4F5FF 0%, #EBFFEF 100%);
+    min-height:100vh;
+    .container{
+        display:flex;
+        justify-content:space-between;
+        flex-wrap:wrap;
+    }
+
+    .left{
+        max-width: 360px;
+        width:100%;
+    }
+
+    .right{
+        flex:1;
+        margin-left:8em;
+        border-radius:15px;
+
+        .country-nav{
+            margin: 0px auto 2em;
+            display:table;
+            position:relative;
+            z-index:1;
+            ul{
+                display:flex;
+                flex-wrap:wrap;
+                position:relative;
+                padding:10px 0px;
+
+                li{
+                    margin-right: 1em;
+                    font-size:14px;
+                    font-weight:600;
+                    padding:0px 25px;
+                    cursor:pointer;
+                    text-align:center;
+                    transition:all 0.3s ease-out;
+                    color:#718c7d;
+                    &.active{color:white;}
+                }
+                .indicator{
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    z-index:-1;
+                    width:100px;
+                    height:100%;
+                    background-color: $dcash-blue;
+                    border-radius:25px;
+                    transition:all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
+                }
+
+            }
+        }
+
+        .fi-list{
+            background-color:white;
+            border:1px solid #e5eae7;
+            @include img-border;
+
+            li{
+                a{
+                    font-size:20px; 
+                    font-weight:400;
+                    color:#1c1b1b;
+                    padding:1.5em;
+                    display:block;
+                    border-bottom:1px solid #e5eae7;
+                }
+
+                &:last-child a{
+                    border-bottom:none;
+                }
+            }
+        }
+    }
+}

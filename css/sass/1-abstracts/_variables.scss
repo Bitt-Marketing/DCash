@@ -27,8 +27,3 @@ $section-padding: 125px;
         transform: translate(0,4px);
     }
 }
-
-@mixin img-border{
-    border-radius: 15px;
-    overflow: hidden; 
-}
