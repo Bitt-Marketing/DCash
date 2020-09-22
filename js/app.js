@@ -81,6 +81,8 @@ if(contentDiv.classList.contains('business')){
 if(contentDiv.classList.contains('fi')){
   const countryNav = document.querySelector('.country-nav ul');
   const countryNavItems = countryNav.children;
+  const fiContainer = document.querySelector('.fi-list');
+  const fiList = fiContainer.children;
   const navPositions = [];
   const navSizes = [];
   const indicator = document.createElement('i');
@@ -90,19 +92,23 @@ if(contentDiv.classList.contains('fi')){
     navPositions[i] = countryNavItems[i].offsetLeft;
     navSizes[i] = countryNavItems[i].offsetWidth;
   }
+
   console.log(navPositions);
   countryNav.appendChild(indicator);
   indicator.style.left = `${navPositions[0]}px`;
   indicator.style.width = `${navSizes[0]}px`;
+  fiList[0].classList.add('active')
 
   for(let i = 0; i < countryNavItems.length; i++){
       countryNavItems[i].addEventListener('click', function(){
         let activeNavitem = countryNav.querySelector('.active');
+        let activeFiItem= fiContainer.querySelector('.active');
         activeNavitem.classList.remove('active');
+        activeFiItem.classList.remove('active')
         this.classList.add('active');
         indicator.style.left = `${navPositions[i]}px`;
         indicator.style.width = `${navSizes[i]}px`;
-
-      })
+        fiList[i].classList.add('active')
+      });
   }
 }
