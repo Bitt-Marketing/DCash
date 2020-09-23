@@ -3,20 +3,18 @@
     background-image: linear-gradient(-17deg, #F4F5FF 0%, #EBFFEF 100%);
     min-height:100vh;
     .container{
-        display:flex;
-        justify-content:space-between;
-        flex-wrap:wrap;
     }
 
-    .left{
-        max-width: 360px;
+    .info{
+        max-width: 510px;
         width:100%;
+        text-align:center;
+        margin:0px auto 5em;
     }
 
     .right{
-        flex:1;
-        margin-left:8em;
-        border-radius:15px;
+        max-width:960px;
+        margin:0px auto;
 
         .country-nav{
             margin: 0px auto 2em;
@@ -27,30 +25,70 @@
                 display:flex;
                 flex-wrap:wrap;
                 position:relative;
-                padding:10px 0px;
+                padding-bottom:6px;
 
                 li{
                     margin-right: 1em;
-                    font-size:14px;
+                    font-size:16px;
                     font-weight:600;
-                    padding:0px 25px;
+                    padding:0px 0px;
                     cursor:pointer;
                     text-align:center;
                     transition:all 0.3s ease-out;
                     color:#718c7d;
                     position:relative;
-
-
-                    &.active{color:white;}
+                    margin-right:3em;
+                    
                     &.last{margin:0px;}
+
+                    &:before{
+                        content:'';
+                        width:38px;
+                        height:22px;
+                        border-radius: 3px;
+                        background-repeat: no-repeat;
+                        background-size:cover;
+                        background-position:center;
+                        position:absolute;
+                        left:50%;
+                        top:-33px;
+                        transform:scale(0.6) translateX(-50%);
+                        transform-origin: left;
+                        opacity:0;
+                        background-color:black;
+                        pointer-events: none;
+                        transition:all 0.15s ease-in;
+
+                    }
+                    &.ant:before{
+                        background-image: url('../images/flags/antigua-and-barbuda-flag.png');
+                    }
+                    &.gren:before{
+                        background-image: url('../images/flags/grenada-flag.png');
+                    }
+                    &.stkn:before{
+                        background-image: url('../images/flags/saint-kitts-and-nevis-flag.png');
+                    }
+                    &.stl:before{
+                        background-image: url('../images/flags/saint-lucia-flag.png');
+                    }
+
+                    &.active{
+                        color:$dcash-blue;
+                        &:before{
+                            transform:scale(1) translateX(-50%);
+                            opacity:1;
+                            transition:all 0.15s ease-out 0.25s;
+                        }
+                    }
                 }
                 .indicator{
                     position:absolute;
-                    top:0;
+                    bottom:0;
                     left:0;
                     z-index:-1;
                     width:100px;
-                    height:100%;
+                    height:2px;
                     background-color: $dcash-blue;
                     border-radius:25px;
                     transition:all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
@@ -60,12 +98,12 @@
         }
 
         .fi-list{
-            background-color:white;
-            border:1px solid #e5eae7;
-            @include img-border;
+            min-height:380px;
 
             ul{
-
+                @include img-border;
+                background-color:white;
+                border:1px solid #e5eae7;
                 overflow: hidden; // Hide the element content, while height = 0
                 height: 0; opacity: 0;
                 transition: height 0ms 100ms, opacity 1000ms 0ms;
@@ -77,7 +115,7 @@
 
                 li{
                     a{
-                        font-size:18px; 
+                        font-size:16px; 
                         font-weight:400;
                         color:#1c1b1b;
                         padding:1.5em;

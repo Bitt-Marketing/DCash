@@ -1,0 +1,32 @@
+#content.learn{
+    padding-top:$header-with-sub-height;
+    background-color:#110f44;
+    min-height: 100vh;
+
+    p{color:white;}
+
+    .intro{
+        max-width:480px;
+        margin:0px auto;
+        padding:100px 0px 0px;
+        text-align: center;
+    }
+
+    .lessons{
+        border-radius: 15px;
+        overflow: hidden;
+        background-color: white;
+        border: 1px solid #e5eae7;
+        overflow: hidden;
+        max-width:600px;
+        margin:45px auto;
+
+        a{
+            font-size: 16px;
+            color: #1c1b1b;
+            padding: 1.5em;
+            display: block;
+            border-bottom: 1px solid #e5eae7;
+        }
+    }
+}

@@ -2,14 +2,14 @@
     display:flex;
     align-items:center;
     justify-content: space-between;
-    padding:1em 2.5em;
+    padding:0.85em 2.5em;
     position:fixed;
     z-index:99;
     width:100%;
     background-color:white;
 
     .logo{
-        max-width:75px;
+        max-width:70px;
 
         img{display:block; width:100%;}
     }
@@ -25,18 +25,29 @@
             margin:0px 2em;
 
             a{
-                font-weight:400; 
-                font-size:1.2em; 
+                font-weight:600; 
+                font-size:1em; 
                 color:#000;
                 position:relative;
 
+                i.ic{
+                    display:inline-block;
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    background-position: center;
+                    background-image: url('../images/icons/ic-down.svg');
+                    width: 10px;
+                    height: 10px;
+                    vertical-align: middle;
+                    margin-left: 2px;
+                }
                 &.active{
                     color:$dcash-blue;
 
                     &:after{
                         content: "";
                         position: absolute;
-                        bottom: -32px;
+                        bottom: -28px;
                         width: 0px;
                         height: 0px;
                         border-left: 10px solid transparent;
@@ -83,7 +94,7 @@
     top:$header-height;
     left:0;  
     width:100%;
-    padding:1em 0;
+    padding:0.85em 0;
     display:flex;
     align-items: center;
     justify-content: center;

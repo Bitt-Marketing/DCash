@@ -198,7 +198,7 @@ a {
 }
 
 #content {
-  padding-top: 90px;
+  padding-top: 81px;
 }
 
 .container {
@@ -230,14 +230,14 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1em 2.5em;
+  padding: 0.85em 2.5em;
   position: fixed;
   z-index: 99;
   width: 100%;
   background-color: white;
 }
 .header .logo {
-  max-width: 75px;
+  max-width: 70px;
 }
 .header .logo img {
   display: block;
@@ -254,10 +254,21 @@ a {
   margin: 0px 2em;
 }
 .header ul.product-nav li a {
-  font-weight: 400;
-  font-size: 1.2em;
+  font-weight: 600;
+  font-size: 1em;
   color: #000;
   position: relative;
+}
+.header ul.product-nav li a i.ic {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-image: url("../images/icons/ic-down.svg");
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+  margin-left: 2px;
 }
 .header ul.product-nav li a.active {
   color: #3344b3;
@@ -265,7 +276,7 @@ a {
 .header ul.product-nav li a.active:after {
   content: "";
   position: absolute;
-  bottom: -32px;
+  bottom: -28px;
   width: 0px;
   height: 0px;
   border-left: 10px solid transparent;
@@ -307,10 +318,10 @@ a {
   border-bottom: 1px solid #ebecf0;
   border-top: 1px solid #ebecf0;
   position: fixed;
-  top: 90px;
+  top: 81px;
   left: 0;
   width: 100%;
-  padding: 1em 0;
+  padding: 0.85em 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -562,7 +573,7 @@ a {
 }
 
 #content.consumer {
-  padding-top: 143px;
+  padding-top: 129px;
   background-image: url(../images/consumer/consumer-hero2.jpg);
   background-size: 100%;
   background-position: 0px 60px;
@@ -665,7 +676,7 @@ a {
 }
 
 #content.business {
-  padding-top: 143px;
+  padding-top: 129px;
   background-image: url("../images/merchants/business-hero4.jpg");
   background-size: 100%;
   background-position: 0px -120px;
@@ -826,7 +837,7 @@ a {
 }
 
 #content.wheretouse {
-  padding-top: 143px;
+  padding-top: 129px;
   background-image: linear-gradient(90deg, #F8F9FF 0%, #F0FBF3 100%);
 }
 #content.wheretouse .intro {
@@ -931,19 +942,15 @@ a {
   background-image: linear-gradient(-17deg, #F4F5FF 0%, #EBFFEF 100%);
   min-height: 100vh;
 }
-#content.fi .container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-#content.fi .left {
-  max-width: 360px;
+#content.fi .info {
+  max-width: 510px;
   width: 100%;
+  text-align: center;
+  margin: 0px auto 5em;
 }
 #content.fi .right {
-  flex: 1;
-  margin-left: 8em;
-  border-radius: 15px;
+  max-width: 960px;
+  margin: 0px auto;
 }
 #content.fi .right .country-nav {
   margin: 0px auto 2em;
@@ -955,43 +962,80 @@ a {
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  padding: 10px 0px;
+  padding-bottom: 6px;
 }
 #content.fi .right .country-nav ul li {
   margin-right: 1em;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
-  padding: 0px 25px;
+  padding: 0px 0px;
   cursor: pointer;
   text-align: center;
   transition: all 0.3s ease-out;
   color: #718c7d;
   position: relative;
-}
-#content.fi .right .country-nav ul li.active {
-  color: white;
+  margin-right: 3em;
 }
 #content.fi .right .country-nav ul li.last {
   margin: 0px;
 }
+#content.fi .right .country-nav ul li:before {
+  content: "";
+  width: 38px;
+  height: 22px;
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  left: 50%;
+  top: -33px;
+  transform: scale(0.6) translateX(-50%);
+  transform-origin: left;
+  opacity: 0;
+  background-color: black;
+  pointer-events: none;
+  transition: all 0.15s ease-in;
+}
+#content.fi .right .country-nav ul li.ant:before {
+  background-image: url("../images/flags/antigua-and-barbuda-flag.png");
+}
+#content.fi .right .country-nav ul li.gren:before {
+  background-image: url("../images/flags/grenada-flag.png");
+}
+#content.fi .right .country-nav ul li.stkn:before {
+  background-image: url("../images/flags/saint-kitts-and-nevis-flag.png");
+}
+#content.fi .right .country-nav ul li.stl:before {
+  background-image: url("../images/flags/saint-lucia-flag.png");
+}
+#content.fi .right .country-nav ul li.active {
+  color: #3344b3;
+}
+#content.fi .right .country-nav ul li.active:before {
+  transform: scale(1) translateX(-50%);
+  opacity: 1;
+  transition: all 0.15s ease-out 0.25s;
+}
 #content.fi .right .country-nav ul .indicator {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   z-index: -1;
   width: 100px;
-  height: 100%;
+  height: 2px;
   background-color: #3344b3;
   border-radius: 25px;
   transition: all 0.35s cubic-bezier(0.65, 0, 0.35, 1);
 }
 #content.fi .right .fi-list {
-  background-color: white;
-  border: 1px solid #e5eae7;
-  border-radius: 15px;
-  overflow: hidden;
+  min-height: 380px;
 }
 #content.fi .right .fi-list ul {
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid #e5eae7;
   overflow: hidden;
   height: 0;
   opacity: 0;
@@ -1003,7 +1047,7 @@ a {
   transition: height 0ms 0ms, opacity 1500ms 0ms;
 }
 #content.fi .right .fi-list ul li a {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   color: #1c1b1b;
   padding: 1.5em;
@@ -1012,6 +1056,37 @@ a {
 }
 #content.fi .right .fi-list ul li:last-child a {
   border-bottom: none;
+}
+
+#content.learn {
+  padding-top: 129px;
+  background-color: #110f44;
+  min-height: 100vh;
+}
+#content.learn p {
+  color: white;
+}
+#content.learn .intro {
+  max-width: 480px;
+  margin: 0px auto;
+  padding: 100px 0px 0px;
+  text-align: center;
+}
+#content.learn .lessons {
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+  border: 1px solid #e5eae7;
+  overflow: hidden;
+  max-width: 600px;
+  margin: 45px auto;
+}
+#content.learn .lessons a {
+  font-size: 16px;
+  color: #1c1b1b;
+  padding: 1.5em;
+  display: block;
+  border-bottom: 1px solid #e5eae7;
 }
 
 /*# sourceMappingURL=app.css.map */
