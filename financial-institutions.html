@@ -15,8 +15,24 @@
         </div>
 
         <ul class="product-nav">
-            <li><a href="consumer/">Consumer</a></li>
-            <li><a href="merchant/">Merchant</a></li>
+            <li><a href="#">Consumer <i class="ic"></i></a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Where to use</a></li>
+                        <li><a href="#">Learn to use</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="merchant/">Merchant <i class="ic"></i></a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Tiers</a></li>
+                        <li><a href="#">Learn to use</a></li>
+                    </ul>
+                </div>
+            </li>
         </ul>
 
         <ul>
@@ -36,7 +52,7 @@
     <div id="content" class="fi">
         <div class="container">
             <div class="info">
-                <h2>Participating Financial Institutions</h2>
+                <h3>Participating Financial Institutions</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum nihil eaque, nostrum, voluptas id doloribus nobis quisquam illum quasi praesentium numquam.</p>
             </div>
             <div class="right">
@@ -49,62 +65,84 @@
                     </ul>
                 </div>
 
+                <select name="countries" id="countries">
+                    <option value="antigua">Antigua & Barbuda</option>
+                    <option value="grenada">Grenada</option>
+                    <option value="stkitts">St. Kitts &amp; Nevis</option>
+                    <option value="stkitts">Saint Lucia</option>
+                  </select>
+
                 <div class="fi-list">
                     <ul class="antigua">
                         <li>
-                            <a href="http://www.caribbeanunionbank.com/" target='_blank'>Caribbean Union Bank</a>
+                           <span>Caribbean Union Bank</span>
+                           <i>customerservice@cub.ag </i>
                         </li>
                         <li>
-                            <a href="https://www.cibcfcib.com/locations/antigua" target='_blank'>CIBC FirstCaribbean International Bank Ltd.</a>
-                        </li>
-                        <li>
-                            <a href="https://ecabank.com/home/" target='_blank'> Eastern Caribbean Amalgamated Bank</a>
-                        </li>
+                            <span>CIBC FirstCaribbean International Bank Ltd.</span>
+                            <i>-</i>
+                         </li>
+                         <li>
+                            <span>Eastern Caribbean Amalgamated Bank</span>
+                            <i>DXCD@ecabank.com</i>
+                         </li>
                     </ul>
 
                     <ul class="grenada">
                         <li>
-                            <a href="https://www.arizacu.com/" target='_blank'>Ariza Credit Union</a>
-                        </li>
-                        <li>
-                            <a href="https://www.thecommunalcu.com/" target='_blank'>Communal Co-operative Credit Union Ltd.</a>
-                        </li>
-                        <li>
-                            <a href="https://www.gutcu.com/" target='_blank'>G.U.T. Co-operative Credit Union Ltd.</a>
-                        </li>
-                        <li>
-                            <a href="https://www.grenadaco-opbank.com/" target='_blank'>Grenada Co-operative Bank  Limited.</a>
-                        </li>
-                        <li>
-                            <a href="https://www.republicgrenada.com/" target='_blank'>Republic Bank (Grenada) Ltd</a>
-                        </li>
+                            <span>Ariza Credit Union</span>
+                            <i>-</i>
+                         </li>
+                         <li>
+                            <span>Communal Co-operative Credit Union Ltd.</span>
+                            <i>3cudxcdsupport@thecommunalcu.com</i>
+                         </li>
+                         <li>
+                            <span>G.U.T. Co-operative Credit Union Ltd.</span>
+                            <i>-</i>
+                         </li>
+                         <li>
+                            <span>Grenada Co-operative Bank  Limited.</span>
+                            <i>-</i>
+                         </li>
+                         <li>
+                            <span>Republic Bank (Grenada) Ltd</span>
+                            <i>-</i>
+                         </li>
                     </ul>
 
                     <ul class="stkitts">
                         <li>
-                            <a href="https://neviscreditunion.com/" target='_blank'>Nevis Co-operative Credit Union Limited</a>
-                        </li>
-                        <li>
-                            <a href="https://skccu.com/" target='_blank'>St.Kitts Co-operative Credit Union</a>
-                        </li>
-                        <li>
-                            <a href="https://www.sknanb.com/" target='_blank'> St. Kitts-Nevis-Anguilla National Bank Limited </a>
-                        </li>
+                            <span>Nevis Co-operative Credit Union Limited</span>
+                            <i>info@neviscreditunion.com</i>
+                         </li>
+                         <li>
+                            <span>St.Kitts Co-operative Credit Union</span>
+                            <i>DCash@skccu.com</i>
+                         </li>
+                         <li>
+                            <span>St. Kitts-Nevis-Anguilla National Bank Limited</span>
+                            <i>customerservice@sknanb.com</i>
+                         </li>
                     </ul>
 
                     <ul class="stlucia">
                         <li>
-                            <a href="https://www.1stnationalbankonline.com/" target='_blank'>1st National Bank St. Lucia Limited</a>
-                        </li>
-                        <li>
-                            <a href="https://www.bankofsaintlucia.com/" target='_blank'>Bank of Saint Lucia</a>
-                        </li>
-                        <li>
-                            <a href="https://jannou.org/" target='_blank'> Jannou Credit Union</a>
-                        </li>
-                        <li>
-                            <a href="https://monreposcreditunion.com/" target='_blank'>Mon Repos Eastern Co-operative Credit Union (1968) Ltd.</a>
-                        </li>
+                            <span>1st National Bank St. Lucia Limited</span>
+                            <i>dxcd@1stnationalbankslu.com</i>
+                         </li>
+                         <li>
+                            <span>Bank of Saint Lucia</span>
+                            <i>DXCD-info@bankofsaintlucia.com</i>
+                         </li>
+                         <li>
+                            <span>Jannou Credit Union</span>
+                            <i>dcashsupport@cscreditunion.org</i>
+                         </li>
+                         <li>
+                            <span>Mon Repos Eastern Co-operative Credit Union (1968) Ltd.a</span>
+                            <i>-</i>
+                         </li>
                     </ul>
                 </div>
             </div>

@@ -1,0 +1,25 @@
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+input, select, textarea {
+    font-family: 'Source Sans Pro', sans-serif;
+    transition: all 0.25s ease-out;
+}
+
+select{
+    border: 1px solid #e5eae7;
+    background: url("../images/icons/ic-down.svg") no-repeat right 15px center, white;
+    background-size:12px;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: none;
+    font-size: 15px;
+    padding: 14px;
+    color: $dcash-green;
+    font-weight: 600;
+    position: relative;
+}

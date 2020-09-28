@@ -18,22 +18,30 @@ for(let i = 0; i< homeStartedBtns.length; i++){
 
 gsap.registerPlugin(ScrollTrigger);
 
-//Merchant Page
+//Consumer  Page
 if(contentDiv.classList.contains('consumer')){
+  const tl1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".intro",
+      start: "top 129px",
+      end: "bottom top",
+      scrub: true,
+    }
+  });
+
+  gsap.utils.toArray(".parallax").forEach(layer => {
+    const depth = layer.dataset.depth;
+    const movement = -(layer.offsetHeight * depth)
+    tl1.to(layer, {y: movement, ease: "none"}, 0)
+  });
+
   gsap.timeline({
     scrollTrigger: {
-      trigger: ".benefits",
-      start: "top top",
-      end: window.innerHeight * 2,
+      trigger: ".intro",
+      start: "top 129px",
+      end: "bottom top",
       scrub: true,
-      pin: ".benefits .img",
-      anticipatePin: 1
     }
-  })
-  .to(".benefits .img", {
-    scale: 1,
-    y: 100,
-    ease:  'none',
   });
 }
 
@@ -99,6 +107,7 @@ const scroll = new LocomotiveScroll({
 if(contentDiv.classList.contains('fi')){
   const countryNav = document.querySelector('.country-nav ul');
   const countryNavItems = countryNav.children;
+  const countrySelectElMobile = document.querySelector('#countries');
   const fiContainer = document.querySelector('.fi-list');
   const fiList = fiContainer.children;
   const navPositions = [];
@@ -111,22 +120,49 @@ if(contentDiv.classList.contains('fi')){
     navSizes[i] = countryNavItems[i].offsetWidth;
   }
 
-  console.log(navPositions);
+  //Set inital placement of indicator
   countryNav.appendChild(indicator);
   indicator.style.left = `${navPositions[0]}px`;
   indicator.style.width = `${navSizes[0]}px`;
-  fiList[0].classList.add('active')
+
+  //Show first country on load
+  fiList[0].classList.add('active');
+
+  function updateFiList(index){
+    let activeFiItem = fiContainer.querySelector('.active');
+    activeFiItem.classList.remove('active');
+    fiList[index].classList.add('active');
+  }
+
+  function updateCustomNav(index){
+    countryNav.querySelector('.active').classList.remove('active');
+    countryNavItems[index].classList.add('active');
+    indicator.style.left = `${navPositions[index]}px`;
+    indicator.style.width = `${navSizes[index]}px`;
+  }
 
   for(let i = 0; i < countryNavItems.length; i++){
       countryNavItems[i].addEventListener('click', function(){
-        let activeNavitem = countryNav.querySelector('.active');
-        let activeFiItem= fiContainer.querySelector('.active');
-        activeNavitem.classList.remove('active');
-        activeFiItem.classList.remove('active')
-        this.classList.add('active');
-        indicator.style.left = `${navPositions[i]}px`;
-        indicator.style.width = `${navSizes[i]}px`;
-        fiList[i].classList.add('active')
+        updateCustomNav(i);
+        countrySelectElMobile.selectedIndex = i;
+        updateFiList(i);
       });
   }
+
+  countrySelectElMobile.addEventListener('input', function(){
+    let inputVal = this.value;
+    updateCustomNav(this.selectedIndex);
+    updateFiList(this.selectedIndex);
+  });
+
+  function copy(){
+    let textarea = document.createElement('textarea');
+    textarea.value = this.querySelector('i').innerText;
+    this.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    this.removeChild(textarea)
+  }
+
+
 }
