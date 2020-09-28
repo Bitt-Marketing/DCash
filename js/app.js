@@ -41,39 +41,57 @@ if(contentDiv.classList.contains('consumer')){
 //Merchant Page
 if(contentDiv.classList.contains('business')){
 
-  let merchantFeat = document.querySelector('.landing .right').children;
-  gsap.timeline({
+
+  const tl1 = gsap.timeline({
     scrollTrigger: {
-      trigger: ".feature-container",
-      start: "top 205px",
-      end: window.innerHeight * 2.5,
+      trigger: ".intro",
+      start: "top 129px",
+      end: "bottom top",
       scrub: true,
-      pin: ".features",
-      anticipatePin: 1
     }
-  })
-  .to(".intro-img", {
-    scale: 1,
-    x:0,
-    ease:  'none',
-  })
-  .to(merchantFeat, { opacity:1, scale: 1, stagger:0.15}, '-=0.45');
+  });
+
+  gsap.utils.toArray(".parallax").forEach(layer => {
+    const depth = layer.dataset.depth;
+    const movement = -(layer.offsetHeight * depth)
+    tl1.to(layer, {y: movement, ease: "none"}, 0)
+  });
 
   gsap.timeline({
     scrollTrigger: {
-      trigger: ".why-container",
-      start: "top 205px",
-      end: window.innerHeight * 4,
+      trigger: ".intro",
+      start: "top 129px",
+      end: "bottom top",
       scrub: true,
-      pin: ".why",
-      anticipatePin: 1
     }
   })
-  .to(".why", {
-    scale: 1,
-    x:0,
+  .to(".mason ul", {
+    x:-400,
     ease:  'none',
-  }).to(".first .text", {duration: 0.1, opacity: 1}, "-=0.035");
+  });
+
+  /*
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: ".why-container",
+        start: "top 205px",
+        end: window.innerHeight * 4,
+        scrub: true,
+        pin: ".why",
+        anticipatePin: 1
+      }
+    })
+    .to(".why", {
+      scale: 1,
+      x:0,
+      ease:  'none',
+    }).to(".first .text", {duration: 0.1, opacity: 1}, "-=0.035");
+  */
+
+const scroll = new LocomotiveScroll({
+  el: document.querySelector('[data-scroll-container]'),
+  smooth: true
+});
 
 }
 
