@@ -19,3 +19,27 @@
         img{max-width:100%;}
     }
 }
+
+
+.eccb-recognition{
+    line-height: 1.2; 
+    color:#9B9B9B; 
+    font-weight: 600; 
+    font-size: 0.7em;
+    position:fixed;
+    bottom:2em;
+    left:2.5em;
+    text-align: center;
+
+    img{
+        width: 100%; 
+        max-width:30px; 
+        display:block; 
+        margin:0px auto 10px;
+    }
+}
+
+@media screen and (max-width:950px), screen and(max-device-width:950px){
+    .container{width:calc(100% - 35px);}
+    .eccb-recognition{display:none;}
+}

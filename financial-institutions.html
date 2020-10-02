@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <title>DCash - Participating Financial Institutions</title>
-    <link href="css/app.css" type="text/css" rel="stylesheet"/>
+    <link href="css/app.css?v=0.5" type="text/css" rel="stylesheet"/>
 </head>
 <body>
     <div class="header">
@@ -18,7 +19,7 @@
             <li><a href="#">Consumer <i class="ic"></i></a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Overview & Download</a></li>
                         <li><a href="#">Where to use</a></li>
                         <li><a href="#">Learn to use</a></li>
                     </ul>
@@ -27,7 +28,7 @@
             <li><a href="#">Merchant <i class="ic"></i></a>
                 <div class="dropdown">
                     <ul>
-                        <li><a href="#">Overview</a></li>
+                        <li><a href="#">Overview & Download</a></li>
                         <li><a href="#">Tiers</a></li>
                         <li><a href="#">Learn to use</a></li>
                     </ul>
@@ -36,14 +37,14 @@
         </ul>
 
         <ul>
-            <li><a href="financial-institutions.html" class="active">Financial Institutions</a></li>
-            <li><a href="">Promos</a></li>
-            <li><a href="">About</a></li>
+            <li><a href="#" class="active">Financial Institutions</a></li>
+            <li><a href="#">Promos</a></li>
+            <li><a href="#">About</a></li>
         </ul>
     </div>
 
     <div class="eccb-recognition">
-        <img src="images/eccb-logo.png"/>
+        <img src="#"/>
         An
         ECCB<br>
         Initiative
@@ -65,83 +66,173 @@
                     </ul>
                 </div>
 
-                <select name="countries" id="countries">
+                <select name="countries" id="countrySelectMobile">
                     <option value="antigua">Antigua & Barbuda</option>
                     <option value="grenada">Grenada</option>
                     <option value="stkitts">St. Kitts &amp; Nevis</option>
-                    <option value="stkitts">Saint Lucia</option>
+                    <option value="stlucia">Saint Lucia</option>
                   </select>
 
                 <div class="fi-list">
                     <ul class="antigua">
                         <li>
-                           <span>Caribbean Union Bank</span>
-                           <i>customerservice@cub.ag </i>
+                            <div class="fi-logo"><img src="images/filogos/caribbean-union-bank.jpg"/></div>
+                            <div class="fi-info">
+                                <span>Caribbean Union Bank</span>
+                                <div class="contact">
+                                    <i>customerservice@cub.ag</i>
+                                    <i>(268) 480-5000</i>
+                                </div> 
+                            </div>
                         </li>
                         <li>
-                            <span>CIBC FirstCaribbean International Bank Ltd.</span>
-                            <i>-</i>
-                         </li>
+                            <div class="fi-logo"><img src="images/filogos/cibc.jpg"/></div>
+                            <div class="fi-info">
+                                <span>CIBC FirstCaribbean International Bank Ltd.</span>
+                                <div class="contact">
+                                    <i>-</i>
+                                    <i>(268) 480-5000</i>
+                                </div>
+                            </div>                     
+                        </li>
                          <li>
-                            <span>Eastern Caribbean Amalgamated Bank</span>
-                            <i>DXCD@ecabank.com</i>
+                            <div class="fi-logo"><img src="images/filogos/ecab.jpg"/></div>
+                            <div class="fi-info">
+                                <span>Eastern Caribbean Amalgamated Bank</span>
+                                <div class="contact">
+                                    <i>DXCD@ecabank.com</i>
+                                    <i>(268) 480-5300</i>
+                                </div>
+                            </div>
                          </li>
                     </ul>
 
                     <ul class="grenada">
                         <li>
-                            <span>Ariza Credit Union</span>
-                            <i>-</i>
+                            <div class="fi-logo"><img src="images/filogos/ariza-credit-union.jpg"/></div>
+                            <div class="fi-info">
+                                <span>Ariza Credit Union</span>
+                                <div class="contact">
+                                    <i>-</i>
+                                    <i>+1 (473)440-1759 / 8296 /2099</i>
+                                </div>
+                            </div>
                          </li>
                          <li>
-                            <span>Communal Co-operative Credit Union Ltd.</span>
-                            <i>3cudxcdsupport@thecommunalcu.com</i>
+                            <div class="fi-logo"><img src="images/filogos/the-communal.jpg"/></div>
+                            <div class="fi-info">
+                                <span>The Communal Co-operative Credit Union Ltd.</span>
+                                <div class="contact">
+                                    <i>3cudxcdsupport@thecommunalcu.com</i>
+                                    <i>+1 (473) 440-1755</i>
+                                </div>
+                            </div>
                          </li>
                          <li>
-                            <span>G.U.T. Co-operative Credit Union Ltd.</span>
-                            <i>-</i>
+                            <div class="fi-logo"><img src="images/filogos/gutccu.png"/></div>
+                            <div class="fi-info">
+                                <span>G.U.T. Co-operative Credit Union Ltd.</span>
+                                <div class="contact">
+                                    <i>-</i>
+                                    <i>+1 (473) 440-1354</i>
+                                </div>
+                            </div>
                          </li>
                          <li>
-                            <span>Grenada Co-operative Bank  Limited.</span>
-                            <i>-</i>
+                            <div class="fi-logo"><img src="images/filogos/grenada-co-op-bank.jpg"/></div>
+                            <div class="fi-info">
+                                <span>Grenada Co-operative Bank  Limited.</span>
+                                <div class="contact">
+                                    <i>dxcd@grenadaco-opbank.com</i>
+                                    <i>+1 (473) 440-2111</i>
+                                </div>
+                            </div>
                          </li>
                          <li>
-                            <span>Republic Bank (Grenada) Ltd</span>
-                            <i>-</i>
+                            <div class="fi-logo"><img src="images/filogos/republic-bank.jpg"/></div>
+                            <div class="fi-info">
+                                <span>Republic Bank (Grenada) Ltd</span>
+                                <div class="contact">
+                                    <i>-</i>
+                                    <i>+1 (473) 444-2265</i>
+                                </div>
+                            </div>
                          </li>
                     </ul>
 
                     <ul class="stkitts">
                         <li>
-                            <span>Nevis Co-operative Credit Union Limited</span>
-                            <i>info@neviscreditunion.com</i>
+                            <div class="fi-logo"><img src="images/filogos/nevis-ccu.png"/></div>
+                            <div class="fi-info">
+                                <span>Nevis Co-operative Credit Union Limited</span>
+                                <div class="contact">
+                                    <i>info@neviscreditunion.com</i>
+                                    <i>+1 (869)469-5634 / +1 (869) 469-1956</i>
+                                </div>
+                            </div>
                          </li>
                          <li>
-                            <span>St.Kitts Co-operative Credit Union</span>
-                            <i>DCash@skccu.com</i>
+                            <div class="fi-logo"><img src="images/filogos/skccu.jpg"/></div>
+                            <div class="fi-info">
+                                <span>St.Kitts Co-operative Credit Union</span>
+                                <div class="contact">
+                                    <i>DCash@skccu.com</i>
+                                    <i>+1 (869) 465-2272</i>
+                                </div>
+                            </div>
                          </li>
                          <li>
-                            <span>St. Kitts-Nevis-Anguilla National Bank Limited</span>
-                            <i>customerservice@sknanb.com</i>
+                            <div class="fi-logo"><img src="images/filogos/stkitts-new-anguilla-national-bank.png"/></div>
+                            <div class="fi-info">
+                                <span>St. Kitts-Nevis-Anguilla National Bank Limited</span>
+                                <div class="contact">
+                                    <i>customerservice@sknanb.com</i>
+                                    <i>+1 (869) 465-2204</i>
+                                </div>
+                            </div>
                          </li>
                     </ul>
 
                     <ul class="stlucia">
                         <li>
-                            <span>1st National Bank St. Lucia Limited</span>
-                            <i>dxcd@1stnationalbankslu.com</i>
+                            <div class="fi-logo"><img src="images/filogos/1st-national-bank-slu.jpg"/></div>
+                            <div class="fi-info">
+                                <span>1st National Bank St. Lucia Limited</span>
+                                <div class="contact">
+                                    <i>dxcd@1stnationalbankslu.com</i>
+                                    <i>+1 (758) 455 7000</i>
+                                </div>
+                            </div>
                          </li>
                          <li>
-                            <span>Bank of Saint Lucia</span>
-                            <i>DXCD-info@bankofsaintlucia.com</i>
+                            <div class="fi-logo"><img src="images/filogos/bank-of-stlucia.png"/></div>
+                            <div class="fi-info">
+                                <span>Bank of Saint Lucia</span>
+                                <div class="contact">
+                                    <i>DXCD-info@bankofsaintlucia.com</i>
+                                    <i>+1 (758) 456-6000 / +1 (305) 501-2931</i>
+                                </div>
+                            </div>
                          </li>
                          <li>
-                            <span>Jannou Credit Union</span>
-                            <i>dcashsupport@cscreditunion.org</i>
+                            <div class="fi-logo"><img src="images/filogos/jannou.jpg"/></div>
+                            <div class="fi-info">
+                                <span>Jannou Credit Union</span>
+                                <div class="contact">
+                                    <i>dcashsupport@cscreditunion.org</i>
+                                    <i>+1 (758) 452-4807</i>
+                                </div>
+                            </div>
                          </li>
                          <li>
-                            <span>Mon Repos Eastern Co-operative Credit Union (1968) Ltd.a</span>
-                            <i>-</i>
+                            <div class="fi-logo"><img src="images/filogos/mon-repos.jpg"/></div>
+                            <div class="fi-info">
+                                <span>Mon Repos Eastern Co-operative Credit Union (1968) Ltd.a</span>
+                                <div class="contact">
+                                    <i>-</i>
+                                    <i>+1 (758) 455-3370</i>
+                                </div>
+                            </div>
                          </li>
                     </ul>
                 </div>

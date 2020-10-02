@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For Personal - Where to use</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <title>Consumer - Where to use</title>
     <link href="../css/app.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
@@ -15,21 +16,37 @@
         </div>
 
         <ul class="product-nav">
-            <li><a href="#" class="active">Consumer</a></li>
-            <li><a href="../merchant/">Merchant</a></li>
+            <li><a href="#" class="active">Consumer <i class="ic"></i></a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="index.html">Overview & Download</a></li>
+                        <li><a href="#">Where to use</a></li>
+                        <li><a href="learn">Learn to use</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="../merchant/">Merchant <i class="ic"></i></a>
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="../merchant/">Overview & Download</a></li>
+                        <li><a href="../merchant/tiers.html">Tiers</a></li>
+                        <li><a href="../merchant/learn/">Learn to use</a></li>
+                    </ul>
+                </div>
+            </li>
         </ul>
 
         <ul>
             <li><a href="../financial-institutions.html">Financial Institutions</a></li>
-            <li><a href="">Promos</a></li>
-            <li><a href="">About</a></li>
+            <li><a href="../promotions.html">Promos</a></li>
+            <li><a href="../about.html">About</a></li>
         </ul>
     </div>
     <div class="sub-header wallet-nav">
         <ul>
             <li><a href="index.html">Overview</a></li>
             <li><a href="#" class="active">Where to use</a></li>
-            <li><a href="">Learn to use</a></li>
+            <li><a href="learn">Learn to use</a></li>
         </ul>
     </div>
 
@@ -43,108 +60,80 @@
     <div id="content" class="wheretouse">
         <div class="container">
             <div class="intro">
-                <h1>Use DCash at the stores you love.</h1>
+                <h2>Use DCash at the stores you love.</h2>
             </div>
 
             <div class="country-nav">
                 <ul>
-                    <li><span class="active">Antigua</span></li>
-                    <li><span>Grenada</span></li>
-                    <li><span>St. Kitts & Nevis</span></li>
-                    <li><span>Saint Lucia</span></li>
+                    <li class="active ant">Antigua &amp; Barbuda</li>
+                    <li class="gren">Grenada</li>
+                    <li class="stkn">St. Kitts &amp; Nevis</li>
+                    <li class="stl last">Saint Lucia</li>
                 </ul>
             </div>
 
-            <div class="merchant-list" id="antigua">
-                <a href="#">
-                    <i class="img"></i>
-                    <span>ABI Insurance Co Ltd.</span>
-                </a>
-                <a href="#">
-                    <i class="img"></i>
-                    <span>Europa Hardware (Antigua) Ltd.</span>
-                </a>
-                <a href="#">
-                    <i class="img"></i>
-                    <span>Future Express Online Shopping Service</span>
-                </a>
-                <a href="#">
-                    <i class="img"></i>
-                    <span>Worldnet Concepts Ltd.</span>
-                </a>
-            </div>
+            <div class="merchant-list">
+                <div class="item" id="antigua">
+                    <a href="#">
+                        <i class="img"></i>
+                        <span>ABI Insurance Co Ltd.</span>
+                    </a>
+                    <a href="#">
+                        <i class="img"></i>
+                        <span>Europa Hardware (Antigua) Ltd.</span>
+                    </a>
+                    <a href="#">
+                        <i class="img"></i>
+                        <span>Future Express Online Shopping Service</span>
+                    </a>
+                    <a href="#">
+                        <i class="img"></i>
+                        <span>Worldnet Concepts Ltd.</span>
+                    </a>
+                </div>
 
-            <div class="merchant-list" id="grenada">
-                <a href="#">
-                    <i class="img"></i>
-                    <span>G&B Trading Inc</span>
-                </a>
-                <a href="#">
-                    <i class="img"></i>
-                    <span>Mitchell's Health and Wellness Pharmacy</span>
-                </a>
-                <a href="#">
-                    <i class="img">><img src="../images/merchants/on/grenada/homepride.png"/></i>
-                    <span>Home Pride Inc.</span>
-                </a>
-                <a href="#">
-                    <i class="img"></i>
-                    <span>Springs FoodMart</span>
-                </a>
-                <a href="#">
-                    <i class="img"></i>
-                    <span>Karib Fusion</span>
-                </a>
-                <a href="#">
-                    <i class="img"></i>
-                    <span>Access</span>
-                </a>
-                <a href="#">
-                    <i class="img"></i>
-                    <span>Mod1</span>
-                </a>
-                <a href="#">
-                    <i class="img"></i>
-                    <span>Lotek Innovations Limited</span>
-                </a>
-            </div>
+                <div class="item" id="grenada">
+                    <a href="#">
+                        <i class="img"></i>
+                        <span>G&B Trading Inc</span>
+                    </a>
+                    <a href="#">
+                        <i class="img"></i>
+                        <span>Mitchell's Health and Wellness Pharmacy</span>
+                    </a>
+                    <a href="#">
+                        <i class="img">><img src="../images/merchants/on/grenada/homepride.png"/></i>
+                        <span>Home Pride Inc.</span>
+                    </a>
+                    <a href="#">
+                        <i class="img"></i>
+                        <span>Springs FoodMart</span>
+                    </a>
+                    <a href="#">
+                        <i class="img"></i>
+                        <span>Karib Fusion</span>
+                    </a>
+                    <a href="#">
+                        <i class="img"></i>
+                        <span>Access</span>
+                    </a>
+                    <a href="#">
+                        <i class="img"></i>
+                        <span>Mod1</span>
+                    </a>
+                    <a href="#">
+                        <i class="img"></i>
+                        <span>Lotek Innovations Limited</span>
+                    </a>
+                </div>
 
-            <div class="merchant-list" id="stkitts">
-                <a href="#">
-                    <i class="img"></i>
-                    <span>ABI Insurance Co Ltd.</span>
-                </a>
-                <a href="#">
-                    <i class="img"></i>
-                    <span>Europa Hardware (Antigua) Ltd.</span>
-                </a>
-                <a href="#">
-                    <i class="img"></i>
-                    <span>Future Express Online Shopping Service</span>
-                </a>
-                <a href="#">
-                    <i class="img"></i>
-                    <span>Worldnet Concepts Ltd.</span>
-                </a>
-            </div>
+                <div class="item" id="stkitts">
+                    to be updated
+                </div>
 
-            <div class="merchant-list" id="stlucia">
-                <a href="#">
-                    <i class="img"></i>
-                    <span>ABI Insurance Co Ltd.</span>
-                </a>
-                <a href="#">
-                    <i class="img"></i>
-                    <span>Europa Hardware (Antigua) Ltd.</span>
-                </a>
-                <a href="#">
-                    <i class="img"></i>
-                    <span>Future Express Online Shopping Service</span>
-                </a>
-                <a href="#">
-                    <i class="img"></i>
-                    <span>Worldnet Concepts Ltd.</span>
-                </a>
+                <div class="item" id="stlucia">
+                    to be updated
+                </div>
             </div>
         </div>
     </div> 

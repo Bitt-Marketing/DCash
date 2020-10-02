@@ -1,7 +1,8 @@
 #content.fi{
     padding:200px 0px 150px;
-    background-image: linear-gradient(-17deg, #F4F5FF 0%, #EBFFEF 100%);
-    min-height:100vh;
+    background-image: linear-gradient(-17deg, #FFF 50%, #EBFFEF 100%);
+    min-height: 100vh;
+    background-position-y: 70px;
     .container{
         display: flex;
         justify-content: space-between;
@@ -12,6 +13,12 @@
         max-width: 385px;
         width:100%;
         margin:0px auto 5em;
+        padding:50px;
+        background-color: white;
+        box-shadow:0px 16px 40px 0px rgba(0, 0, 0, 0.074);
+        align-self:start;
+
+        p{font-size:15px;}
     }
 
     .right{
@@ -31,7 +38,7 @@
 
                 li{
                     margin-right: 1em;
-                    font-size:14px;
+                    font-size:15px;
                     font-weight:600;
                     padding:0px 0px;
                     cursor:pointer;
@@ -56,11 +63,8 @@
                         position:absolute;
                         left:50%;
                         top:-24px;
-                        transform:scale(0.6) translateX(-50%);
+                        transform:scale(0.8) translateX(-50%);
                         transform-origin: left;
-                        opacity:0;
-                        background-color:black;
-                        pointer-events: none;
                         transition:all 0.15s ease-in;
 
                     }
@@ -77,14 +81,7 @@
                         background-image: url('../images/flags/saint-lucia-flag.png');
                     }
 
-                    &.active{
-                        color:$dcash-blue;
-                        &:before{
-                            transform:scale(1) translateX(-50%);
-                            opacity:1;
-                            transition:all 0.15s ease-out 0.25s;
-                        }
-                    }
+                    &.active{color:$dcash-blue;}
                 }
                 .indicator{
                     position:absolute;
@@ -101,14 +98,20 @@
             }
         }
 
-        select{margin-bottom: 1em; display:none;}
+        select{
+            margin-bottom: 1em;
+            display:none;
+            position: sticky;
+            top: 65px;
+            z-index: 4;
+            box-shadow: 0 4px 6px rgba(227, 229, 236, 0.72), 0 1px 3px rgba(0, 0, 0, 0.08);
+            }
 
         .fi-list{
-            min-height:400px;
+            min-height:600px;
             position:relative;
 
             ul{
-                overflow: hidden; // Hide the element content, while height = 0
                 opacity: 0;
                 visibility:hidden;
                 position:absolute;
@@ -125,23 +128,60 @@
                 }
 
                 li{
-                    margin-bottom: 1px;
-                    font-size:16px; 
                     font-weight:400;
                     color:#1c1b1b;
-                    padding:1.5em;
+                    padding:1.5em 0px;
+                    border-bottom:1px solid #c9d9cf;
                     display:flex;
-                    justify-content:space-between;
-                    border: 1px solid #e5eae7;
-                    background-color: white;
-                    border-radius: 10px;
-                    cursor:pointer;
+                    align-items:center;
                     
-                    span{font-weight: 600;}
-                    i{
-                        color:$dcash-blue;
+                    .fi-logo{
+                        max-width: 60px;
+                        background-color: white;
+                        border-radius: 4px;
+                        margin-right:15px;
+                        box-shadow:0 4px 6px rgba(227, 229, 236, 0.72),0 1px 3px rgba(0, 0, 0, 0.08);
+                        overflow:hidden;
+                        img{width:100%; display:block;}
+                    }
+
+                    .fi-info{
+                        span{display:block; margin-bottom: 0.2em; font-size: 16px; font-weight: 600;}
+
+                        .contact{
+                            i{
+                                color:#59685f; 
+                                font-size:15px;
+                                display:inline-block;
+
+                                &:first-child{padding-right: 8px; border-right: 1px solid #c9d9cf;}
+                                &:last-child{padding-left: 8px;}
+                            }
+                        }
                     }
                 }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:950px), screen and(max-device-width:950px){
+
+    #content.fi{
+        padding: 85px 0px 100px;
+        .container{display:block;}
+        .info{margin-bottom:2em; max-width:100%;}
+        .right{
+            margin:0px;
+            .country-nav{display:none;}
+            select{display:block;}
+
+            .fi-list ul li .fi-info .contact i{
+                display:block;
+                padding:0px;
+
+                &:first-child,&:last-child{padding:0px; border:none;}
             }
         }
     }

@@ -16,10 +16,68 @@ for(let i = 0; i< homeStartedBtns.length; i++){
 }
 
 
-gsap.registerPlugin(ScrollTrigger);
+function countryToggle(countryNavContainer, countryContainer){
+  const countryNav = document.querySelector(countryNavContainer);
+  const countryNavItems = countryNav.children;
+  const countriesContainer = document.querySelector(countryContainer);
+  const countries = countriesContainer.children;
+  const countrySelectElMobile = document.querySelector('#countrySelectMobile');
+  const navPositions = [];
+  const navSizes = [];
+  const indicator = document.createElement('i');
+  indicator.className = 'indicator';
+
+  for(let i = 0; i < countryNavItems.length; i++){
+    navPositions[i] = countryNavItems[i].offsetLeft;
+    navSizes[i] = countryNavItems[i].offsetWidth;
+  }
+
+  //Set inital placement of indicator
+  countryNav.appendChild(indicator);
+  indicator.style.left = `${navPositions[0]}px`;
+  indicator.style.width = `${navSizes[0]}px`;
+
+  //Show first country on load
+  countries[0].classList.add('active');
+
+  function updateFiList(index){
+    let activeFiItem = countriesContainer.querySelector('.active');
+    activeFiItem.classList.remove('active');
+    countries[index].classList.add('active');
+  }
+
+  function updateCustomNav(index){
+    countryNav.querySelector('.active').classList.remove('active');
+    countryNavItems[index].classList.add('active');
+    indicator.style.left = `${navPositions[index]}px`;
+    indicator.style.width = `${navSizes[index]}px`;
+  }
+
+  for(let i = 0; i < countryNavItems.length; i++){
+      countryNavItems[i].addEventListener('click', function(){
+        updateCustomNav(i);
+        if(countrySelectElMobile){countrySelectElMobile.selectedIndex = i;}
+        updateFiList(i);
+      });
+  }
+  if(countrySelectElMobile){
+    countrySelectElMobile.addEventListener('input', function(){
+      updateCustomNav(this.selectedIndex);
+      updateFiList(this.selectedIndex);
+      if(window.innerWidth <= 900){
+        window.window.scrollTo({
+          top: 500,
+          behavior: 'smooth'
+        });
+      }
+    });
+  }
+}
+
 
 //Consumer  Page
 if(contentDiv.classList.contains('consumer')){
+  gsap.registerPlugin(ScrollTrigger);
   const tl1 = gsap.timeline({
     scrollTrigger: {
       trigger: ".intro",
@@ -35,21 +93,13 @@ if(contentDiv.classList.contains('consumer')){
     tl1.to(layer, {y: movement, ease: "none"}, 0)
   });
 
-  gsap.timeline({
-    scrollTrigger: {
-      trigger: ".intro",
-      start: "top 129px",
-      end: "bottom top",
-      scrub: true,
-    }
-  });
 }
 
 
 //Merchant Page
 if(contentDiv.classList.contains('business')){
 
-
+  gsap.registerPlugin(ScrollTrigger);
   const tl1 = gsap.timeline({
     scrollTrigger: {
       trigger: ".intro",
@@ -78,91 +128,19 @@ if(contentDiv.classList.contains('business')){
     ease:  'none',
   });
 
-  /*
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: ".why-container",
-        start: "top 205px",
-        end: window.innerHeight * 4,
-        scrub: true,
-        pin: ".why",
-        anticipatePin: 1
-      }
-    })
-    .to(".why", {
-      scale: 1,
-      x:0,
-      ease:  'none',
-    }).to(".first .text", {duration: 0.1, opacity: 1}, "-=0.035");
-  */
-
-const scroll = new LocomotiveScroll({
-  el: document.querySelector('[data-scroll-container]'),
-  smooth: true
-});
-
 }
 
 //Fianancial Institutions PAge
 if(contentDiv.classList.contains('fi')){
-  const countryNav = document.querySelector('.country-nav ul');
-  const countryNavItems = countryNav.children;
-  const countrySelectElMobile = document.querySelector('#countries');
-  const fiContainer = document.querySelector('.fi-list');
-  const fiList = fiContainer.children;
-  const navPositions = [];
-  const navSizes = [];
-  const indicator = document.createElement('i');
-  indicator.className = 'indicator';
-
-  for(let i = 0; i < countryNavItems.length; i++){
-    navPositions[i] = countryNavItems[i].offsetLeft;
-    navSizes[i] = countryNavItems[i].offsetWidth;
-  }
-
-  //Set inital placement of indicator
-  countryNav.appendChild(indicator);
-  indicator.style.left = `${navPositions[0]}px`;
-  indicator.style.width = `${navSizes[0]}px`;
-
-  //Show first country on load
-  fiList[0].classList.add('active');
-
-  function updateFiList(index){
-    let activeFiItem = fiContainer.querySelector('.active');
-    activeFiItem.classList.remove('active');
-    fiList[index].classList.add('active');
-  }
-
-  function updateCustomNav(index){
-    countryNav.querySelector('.active').classList.remove('active');
-    countryNavItems[index].classList.add('active');
-    indicator.style.left = `${navPositions[index]}px`;
-    indicator.style.width = `${navSizes[index]}px`;
-  }
-
-  for(let i = 0; i < countryNavItems.length; i++){
-      countryNavItems[i].addEventListener('click', function(){
-        updateCustomNav(i);
-        countrySelectElMobile.selectedIndex = i;
-        updateFiList(i);
-      });
-  }
-
-  countrySelectElMobile.addEventListener('input', function(){
-    let inputVal = this.value;
-    updateCustomNav(this.selectedIndex);
-    updateFiList(this.selectedIndex);
-  });
-
-  function copy(){
-    let textarea = document.createElement('textarea');
-    textarea.value = this.querySelector('i').innerText;
-    this.appendChild(textarea);
-    textarea.select();
-    document.execCommand('copy');
-    this.removeChild(textarea)
-  }
+  
+  countryToggle('.country-nav ul','.fi-list');
 
 
 }
+
+
+//Fianancial Institutions PAge
+if(contentDiv.classList.contains('wheretouse')){
+  countryToggle('.country-nav ul','.merchant-list');
+}
+

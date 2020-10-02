@@ -1,47 +1,108 @@
 #content.learn{
     padding-top:200px;
-    background:linear-gradient(-210deg, #140659 0%, #06CEA5 100%);
+    background:linear-gradient(0deg, #F8F9FF 0%, #F0FBF3 100%);
     min-height: 100vh;
 
     .container{
         display:flex;
-        flex-wrap: wrap;
-        border-radius: 15px;
-        overflow: hidden;
-        background-color: white;
-        border: 1px solid #e5eae7;
         min-height:calc(100vh - 250px);
     }
 
     .lesson-list{
         overflow: hidden;
-        max-width:450px;
-        margin:0px auto;
-        padding: 50px;
-        background-color: #f9f9f9;
+        max-width: 350px;
+        width:100%;
+        margin: 0px auto;
+        padding: 45px;
+        background-color: white;
+        box-shadow: 0px 16px 40px 0px rgba(0, 0, 0, 0.074);
+        align-self: flex-start;
+        border-radius: 8px;
+        border-radius: 8px;
+        position: sticky;
+        top: 200px;
+
+        li{ 
+            margin-bottom: 30px;
+            &:last-child{margin:0px;}
+        }
 
         a{
-            font-size: 14px;
-            color: #1c1b1b;
-            margin-bottom: 20px;
-            display:block;
-            font-weight:400;
+            font-size: 18px;
+            color: #1f4022;
+            display: block;
+            font-weight: 400;
+
+            &.active{color:#343eba;}
+        }
+
+        .sub{
+            margin: 1em 0px;
+            padding-left: 10px;
+            li{margin-bottom:  10px;
+                &:last-child{margin:0px;}
+            }
+            a{
+                font-weight: 400;
+                font-size:14px;
+                color:gray;
+            }
         }
     }
 
     .lesson-content{
         flex:1;
-        padding:50px;
         margin-left: 5em;
 
         &.intro{
-            display:grid;
-            place-items:center;
             text-align: center;
         }
 
         .contain{
-            max-width: 750px;
+            max-width: 600px;
+            margin: 0px auto;
+            padding-bottom: 250px;
+            h4{margin-top:2em;}
+
+            ul{
+                padding-left: 25px;
+
+                li{
+                    list-style: disc;
+                    padding-left:25px;
+                    margin-bottom:2em;
+                    p{margin-bottom: 0px;}
+                    
+                }
+            }
+
+            ol{
+                padding-left: 25px;
+                font-weight:600;
+
+                li{
+                    list-style: number;
+                    padding-left:25px;
+                    margin-bottom:2em;
+                    p{margin-bottom: 0px; font-weight: 400;}
+                    .sub{
+                        padding-left:25px;
+                        margin:1em 0px;
+                        li{list-style:upper-roman;}
+                        p{font-size:16px;}
+                    }
+                }
+            }
+
+            b{font-weight: 600;}
+
+            .note{
+                background-color: #fffee1;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0px 16px 40px 0px rgba(0, 0, 0, 0.074);
+                font-size: 16px;
+            }
         }
     }
 }

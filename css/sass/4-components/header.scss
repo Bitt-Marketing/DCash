@@ -88,7 +88,7 @@
                 transition: all 0.2s ease-in-out;
                 transform: translateY(5px);
                 padding: 6px;
-                min-width: 150px;
+                min-width: 190px;
 
                 ul{
                     display:block;
@@ -97,8 +97,8 @@
 
                         a{
                             padding: 14px 12px;
-                            font-weight: 600;
-                            font-size: 14px;
+                            font-weight: 400;
+                            font-size: 15px;
                             display: block;
                             border-radius: 4px;
 
@@ -124,7 +124,7 @@
         li{
             margin-left: 2em;
 
-            a{color:#707075; font-weight: 400; font-size: 16px;
+            a{color:#5b5b5b; font-weight: 400; font-size: 16px;
                 &.active{color:$dcash-blue;}
             }
         }
@@ -182,5 +182,14 @@
             &.active{color:#fff; font-weight: 600;}
         }
 
+    }
+}
+
+@media screen and (max-width:950px), screen and(max-device-width:950px){
+    .header {
+        padding:0.5em 25px;
+        .logo{max-width: 60px;}
+        ul.product-nav{display:none;}
+        ul{display:none;}
     }
 }
