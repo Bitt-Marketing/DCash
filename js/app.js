@@ -66,7 +66,7 @@ function countryToggle(countryNavContainer, countryContainer){
       updateFiList(this.selectedIndex);
       if(window.innerWidth <= 900){
         window.window.scrollTo({
-          top: 500,
+          top: 400,
           behavior: 'smooth'
         });
       }
