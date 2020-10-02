@@ -39,6 +39,10 @@
     }
 }
 
+@media screen and (max-width:1500px), screen and(max-device-width:1500px){
+    .container{width:calc(100% - 200px);}
+}
+
 @media screen and (max-width:950px), screen and(max-device-width:950px){
     .container{width:calc(100% - 35px);}
     .eccb-recognition{display:none;}

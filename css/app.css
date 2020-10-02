@@ -269,6 +269,11 @@ select {
   margin: 0px auto 10px;
 }
 
+@media screen and (max-width: 1500px), screen and (max-device-width: 1500px) {
+  .container {
+    width: calc(100% - 200px);
+  }
+}
 @media screen and (max-width: 950px), screen and (max-device-width: 950px) {
   .container {
     width: calc(100% - 35px);
@@ -1268,32 +1273,35 @@ select {
 }
 
 #content.fi {
-  padding: 200px 0px 150px;
+  padding: 200px 0px;
   background-image: linear-gradient(-17deg, #FFF 50%, #EBFFEF 100%);
   min-height: 100vh;
   background-position-y: 70px;
 }
+#content.fi .bg {
+  position: absolute;
+  width: 39%;
+  top: 40px;
+  left: -12%;
+}
 #content.fi .container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
 }
 #content.fi .info {
-  max-width: 385px;
+  max-width: 800px;
   width: 100%;
   margin: 0px auto 5em;
-  padding: 50px;
-  background-color: white;
-  box-shadow: 0px 16px 40px 0px rgba(0, 0, 0, 0.074);
-  align-self: start;
+  text-align: center;
 }
 #content.fi .info p {
-  font-size: 15px;
+  max-width: 500px;
+  margin: 0px auto;
 }
 #content.fi .right {
-  flex: 1;
   padding-top: 25px;
-  margin-left: 8em;
+  max-width: 1000px;
+  margin: 0px auto;
 }
 #content.fi .right .country-nav {
   margin: 0px auto 2em;
@@ -1307,10 +1315,8 @@ select {
   position: relative;
 }
 #content.fi .right .country-nav ul li {
-  margin-right: 1em;
   font-size: 15px;
   font-weight: 600;
-  padding: 0px 0px;
   cursor: pointer;
   text-align: center;
   transition: all 0.3s ease-out;
@@ -1393,10 +1399,13 @@ select {
 #content.fi .right .fi-list ul li {
   font-weight: 400;
   color: #1c1b1b;
-  padding: 1.5em 0px;
-  border-bottom: 1px solid #c9d9cf;
+  padding: 1.5em 25px;
+  border: 1px solid #c9d9cf;
   display: flex;
   align-items: center;
+  background-color: white;
+  margin-bottom: 2px;
+  border-radius: 8px;
 }
 #content.fi .right .fi-list ul li .fi-logo {
   max-width: 60px;
@@ -1429,12 +1438,23 @@ select {
   padding-left: 8px;
 }
 
-@media screen and (max-width: 950px), screen and (max-device-width: 950px) {
+@media screen and (max-width: 1500px), screen and (max-device-width: 1500px) {
+  #content.fi .right {
+    margin-left: 3em;
+  }
+  #content.fi .right .country-nav ul li {
+    margin-right: 1.5em;
+  }
+}
+@media screen and (max-width: 1000px), screen and (max-device-width: 1000px) {
   #content.fi {
-    padding: 85px 0px 100px;
+    padding: 120px 0px 100px;
   }
   #content.fi .container {
     display: block;
+  }
+  #content.fi .bg {
+    display: none;
   }
   #content.fi .info {
     margin-bottom: 2em;

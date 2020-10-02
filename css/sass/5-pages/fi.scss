@@ -1,30 +1,34 @@
 #content.fi{
-    padding:200px 0px 150px;
+    padding:200px 0px;
     background-image: linear-gradient(-17deg, #FFF 50%, #EBFFEF 100%);
     min-height: 100vh;
     background-position-y: 70px;
-    .container{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+
+    .bg{
+        position: absolute;
+        width: 39%;
+        top: 40px;
+        left: -12%;
     }
 
+    .container{position:relative; z-index:2;}
+
+
     .info{
-        max-width: 385px;
+        max-width: 800px;
         width:100%;
         margin:0px auto 5em;
-        padding:50px;
-        background-color: white;
-        box-shadow:0px 16px 40px 0px rgba(0, 0, 0, 0.074);
-        align-self:start;
+        text-align:center;
 
-        p{font-size:15px;}
+
+        p{max-width: 500px; margin:0px auto;}
     }
 
     .right{
-        flex: 1;
         padding-top:25px;
-        margin-left: 8em;
+        max-width:1000px;
+        margin:0px auto;
+
 
         .country-nav{
             margin: 0px auto 2em;
@@ -37,10 +41,8 @@
                 position:relative;
 
                 li{
-                    margin-right: 1em;
                     font-size:15px;
                     font-weight:600;
-                    padding:0px 0px;
                     cursor:pointer;
                     text-align:center;
                     transition:all 0.3s ease-out;
@@ -130,10 +132,13 @@
                 li{
                     font-weight:400;
                     color:#1c1b1b;
-                    padding:1.5em 0px;
-                    border-bottom:1px solid #c9d9cf;
+                    padding:1.5em 25px;
+                    border:1px solid #c9d9cf;
                     display:flex;
                     align-items:center;
+                    background-color: white;
+                    margin-bottom: 2px;
+                    border-radius: 8px;
                     
                     .fi-logo{
                         max-width: 60px;
@@ -165,12 +170,22 @@
     }
 }
 
+@media screen and (max-width:1500px), screen and(max-device-width:1500px){
+    #content.fi{
+        .right{
+            margin-left: 3em;
+            .country-nav ul li{margin-right:1.5em;}
+        }
+    }
+}
 
-@media screen and (max-width:950px), screen and(max-device-width:950px){
+
+@media screen and (max-width:1000px), screen and(max-device-width:1000px){
 
     #content.fi{
-        padding: 85px 0px 100px;
+        padding: 120px 0px 100px;
         .container{display:block;}
+        .bg{display:none;}
         .info{margin-bottom:2em; max-width:100%;}
         .right{
             margin:0px;
